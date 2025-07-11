@@ -8,6 +8,18 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ darkMode, setDarkMode }: HeroSectionProps) => {
+  const handleDownloadApp = () => {
+    window.open('https://play.google.com/store/apps/details?id=com.xrisp.norifarm&pcampaignid=web_share&pli=1', '_blank');
+  };
+
+  const handleGooglePlay = () => {
+    window.open('https://play.google.com/store/apps/details?id=com.xrisp.norifarm&pcampaignid=web_share&pli=1', '_blank');
+  };
+
+  const handleAppStore = () => {
+    window.open('https://play.google.com/store/apps/details?id=com.xrisp.norifarm&pcampaignid=web_share&pli=1', '_blank');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-amber-50 dark:from-green-900/20 dark:to-amber-900/20">
       {/* Dark Mode Toggle */}
@@ -31,16 +43,16 @@ export const HeroSection = ({ darkMode, setDarkMode }: HeroSectionProps) => {
             Grow crops on Nori Farm App; get fresh harvest at your door.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
+            <Button onClick={handleDownloadApp} size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
               <Download className="mr-2 h-5 w-5" />
               Download App
             </Button>
             <div className="flex gap-3">
-              <Button variant="outline" size="lg" className="border-green-600 text-green-600 hover:bg-green-50">
+              <Button onClick={handleGooglePlay} variant="outline" size="lg" className="border-green-600 text-green-600 hover:bg-green-50">
                 <Play className="mr-2 h-4 w-4" />
                 Google Play
               </Button>
-              <Button variant="outline" size="lg" className="border-green-600 text-green-600 hover:bg-green-50">
+              <Button onClick={handleAppStore} variant="outline" size="lg" className="border-green-600 text-green-600 hover:bg-green-50">
                 <Apple className="mr-2 h-4 w-4" />
                 App Store
               </Button>

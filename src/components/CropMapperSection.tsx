@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -107,6 +106,10 @@ export const CropMapperSection = () => {
     }
   };
 
+  const handleBuyNow = () => {
+    window.open('https://play.google.com/store/apps/details?id=com.xrisp.norifarm&pcampaignid=web_share&pli=1', '_blank');
+  };
+
   const currentProduct = getProductForSearch(searchQuery);
 
   return (
@@ -146,7 +149,7 @@ export const CropMapperSection = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{currentProduct.description}</p>
-                <Button className="w-full bg-green-600 hover:bg-green-700">
+                <Button onClick={handleBuyNow} className="w-full bg-green-600 hover:bg-green-700">
                   <ShoppingCart className="mr-2 h-4 w-4" />
                   Buy Now
                 </Button>
