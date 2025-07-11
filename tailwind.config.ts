@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,13 +85,88 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
+				'slide-in-right': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		function({ addUtilities }: any) {
+			addUtilities({
+				'.hover-scale': {
+					'transition': 'transform 0.2s ease-in-out',
+					'&:hover': {
+						'transform': 'scale(1.02)'
+					}
+				},
+				'.story-link': {
+					'position': 'relative',
+					'&::after': {
+						'content': '""',
+						'position': 'absolute',
+						'width': '100%',
+						'height': '2px',
+						'bottom': '0',
+						'left': '0',
+						'background-color': 'hsl(var(--primary))',
+						'transform': 'scaleX(0)',
+						'transform-origin': 'bottom right',
+						'transition': 'transform 0.3s ease-out'
+					},
+					'&:hover::after': {
+						'transform': 'scaleX(1)',
+						'transform-origin': 'bottom left'
+					}
+				}
+			});
+		}
+	],
 } satisfies Config;
