@@ -12,7 +12,7 @@ A modern, AI-assisted prototype that connects virtual NFT crops from the **Nori 
 
 ## 🧩 Features
 
-- Search for virtual crops (e.g., "Tomato #124")
+- Search for virtual crops (e.g., "Carrot #NFT002")
 - Matches the crop with real-world product data
 - Displays product title, price, image, and buy link
 - Modern UI with **Dark Mode Toggle**
