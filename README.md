@@ -1,48 +1,60 @@
-# Welcome to my  project
+# 🌿 Nori Farm Genesis Web – XrisP Developer Assessment
 
-**Use your preferred IDE**
+A modern, AI-assisted prototype that connects virtual NFT crops from the **Nori Farm** platform with real-world agricultural product listings. Built as part of the **XrisP Developer Task** via Callus.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Live Demo
 
-Follow these steps:
+👉 Coming Soon (Deploy via Vercel or GitHub Pages)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧩 Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Search for virtual crops (e.g., "Tomato #124")
+- Matches the crop with real-world product data
+- Displays product title, price, image, and buy link
+- Modern UI with **Dark Mode Toggle**
+- AI-generated layout and copy using GPT-4 + Lovable.dev
+- Responsive design for mobile & desktop
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🧠 AI Tools Used
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project was built using AI-assisted development, including:
 
-**Use GitHub Codespaces**
+- **GPT-4 (ChatGPT)** for:
+  - UI architecture planning
+  - Component scaffolding
+  - Writing Tailwind-compatible markup
+  - Writing validation logic, UX flows, and microcopy
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Lovable.dev** for:
+  - Visual layout prototyping
+  - Generating components using AI prompts
+  - Quick iteration of section-based design
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🧪 Tech Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Category       | Tools                      |
+|----------------|----------------------------|
+| Frontend       | React, Next.js, Tailwind CSS |
+| Framework      | Lovable.dev                |
+| AI Assistance  | GPT-4 (OpenAI), Lovable    |
+| Data           | Static JSON (`products.json`) |
+| Deployment     | Vercel or GitHub Pages     |
+
+---
+
+## 🖼️ Screenshots
+
+> (You can add screenshot images later here)
+
+---
+
+## 📁 Project Structure
 
